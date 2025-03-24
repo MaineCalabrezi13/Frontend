@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Interno</title>
+    <script>
+        var minhaVariavel = "Olá, Mundo!";
+        let minhaVariavel2 = "Olá, Mundo!";
+        const minhaVariavel3 = "Olá, Mundo!";
+
+        console.log(minhaVariavel);
+        console.log(minhaVariavel2);
+        console.log(minhaVariavel3);
+
+        function saudacao(nome){
+            console.log("Olá, "+ nome + "!");
+        }
+        saudacao("Maine");
+
+        // Função anonima (nao tem a declaração de function)
+        const saudacao1 = function(nome){
+            console.log("Olá, " + nome + "!");
+        }
+        saudacao1("Calabrezi");
+        
+        // Função de flecha
+        const saudacao2 = (nome) =>{
+            console.log("Olá, " + nome + "!");
+        }
+        saudacao2("Nine");
+
+        const pessoa = {
+            nome: "Nine Calabrezi",
+            idade: 18,
+            falar: function(){
+                console.log("Olá, meu nome é " + this.nome);
+            }
+        }
+
+        console.log(pessoa.nome);
+        pessoa.falar();
+
+        class Carro{
+            constructor(marca, modelo){
+                this.marca = marca;
+                this.modelo = modelo;
+            }
+
+            detalhes(){
+                return 'Carro: ${this.marca} ${this.modelo}';
+            }
+        }
+
+        let meuCarro = new Carro("Toyota", "Corolla");
+        console.log(meuCarro.detalhes());
+
+        const idade = 18;
+        if (idade>=18){
+            console.log("Você é maior de idade");
+        }else{
+            console.log("Você é menor de idade");
+        }
+
+        const cor = "Verde";
+
+        switch (cor){
+            case "Vermelho":
+                console.log("A cor é vermelha");
+                break;
+            case "Azul":
+                console.log("A cor é azul");
+                break;
+            case "Amarelo":
+                console.log("A cor é amarelo");
+                break;
+            case "Verde":
+                console.log("A cor é Verde");
+                break;
+            default:
+                console.log("Cor desconhecida");
+        }
+        
+        for(let i = 0; i < 5; i++){
+            console.log(i);
+        }
+
+        let frutas = ["maça","bergamota","melancia"];
+
+        for (let fruta of frutas){
+            console.log(fruta);
+        }
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
